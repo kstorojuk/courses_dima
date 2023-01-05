@@ -5,7 +5,7 @@
     font-family: 'Inter', sans-serif;
 }
 
-.container{
+.header-container{
     background-image: url(../img/Background.png);
     width: 100%;
     height: 100%;
@@ -15,12 +15,21 @@
 }
 
 header{
-    max-width: 1216px;
-    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 30px;
+}
+
+.content{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px ;
+}
+
+.container{
+    max-width: 100% ;
 }
 
 .menu{
@@ -45,8 +54,7 @@ header{
 }
 
 .banner{
-    max-width: 1216px;
-    margin: 72px auto;
+   margin: 72px auto;
     display: grid;
     padding: 0px 30px;
     grid-template-columns: 2fr 1fr;
@@ -122,7 +130,7 @@ header{
 }
 
 .logo-brands{
-    max-width: 1216px;
+    
     margin: 10px auto;
     border-top: 2px solid #E5E7EB;
     border-bottom: 2px solid #E5E7EB;
@@ -132,7 +140,7 @@ header{
 
 .logo-brands>ul{
     max-width: 900px;
-    margin: 0 auto;
+    
     display: flex;
     align-items: center;
     gap: 64px;
@@ -146,7 +154,7 @@ header{
 
 .features-content{
     max-width: 900px;
-    margin: 0 auto;
+    
     text-align: center;
 }
 
@@ -202,13 +210,13 @@ header{
     max-width: 1008px;
     display: flex;
     gap: 32px;
-    margin: 0 auto;
+    
 }
 
 
 .quote{
-    max-width: 1216px;
-    margin: 0 auto;
+    
+    
     position: relative;
     z-index: 0;
 }
@@ -216,6 +224,11 @@ header{
 .quote>img{
     position: absolute;
     top: -55px;
+}
+
+.content-comments{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .comments-text>h2{
@@ -322,11 +335,13 @@ header{
 }
 
 .achievements{
-    max-width: 1216px;
     margin: 172px auto;
     padding: 0.1px 0;
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   
 }
 
 .achievements-content>h2{
@@ -382,8 +397,8 @@ header{
 
 .tools{
     padding: 80px 0px;
-    max-width: 1216px;
-    margin: 0 auto;
+    
+    
     display: flex;
     justify-content: space-between;
 }
@@ -434,9 +449,9 @@ header{
     background-color: #1DB5BE;
 }
 
-.content{
-    max-width: 1216px;
-    margin: 0 auto;
+.content-manage{
+    
+    
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -452,29 +467,62 @@ header{
     
 }
 .footer-content{
-    max-width: 1216px;
-    margin: 0 auto;
+    
+    
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 100px; 
 }
-.footer p{
+
+.footer a, p {
     color: #FFFFFF;
 }
 
 .footer-menu,
 .license{
     padding-top: 24px;
+    
 }
 
 .footer-menu>p{
     word-spacing: 12px;
 }
 
+.footer-menu a{
+    text-decoration:none;
+
+}
 
 .download{
     display: grid;
     justify-items: end;
-    padding: left;
+}
+
+.download>p{
+    margin: left;
+}
+
+@media (max-width: 1200px) {
+.content-comments{  
+    grid-template-columns: 1fr;
+}
+.card{
+    margin-left: 0px;
+    max-width: 100%;
+}
+
+.card-airbnb,
+.card-strapi {
+    margin-top: 0px;
+    gap: 32px;
+    max-width: 100%;
+}
+.column-2 {
+    display: grid;
+    gap: 32px;
+}
+
+.achievements {
+    grid-template-columns: 1fr;
+}
 
 }
