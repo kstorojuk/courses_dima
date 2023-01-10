@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background: linear-gradient(to top, #f9d3ff 0%, #acfcff 100%);
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    padding: 20px 35px;
+    cursor: pointer;
+    border-radius: 6px;
+    position: relative;
+}
+
+button>span, button {
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/************ effect 1 ******************/
+.btn1 button{
+    color: #ffffff;
+    background-color: #3d3d3d;
+    overflow: hidden;
+    box-shadow: 0 5px 15px #0000003d;
+}
+
+.btn1 button span{
+    position: relative;
+    z-index: 1;
+}
+
+.btn1 button:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 136%;
+    height: 422%;
+    background-color: #78c7d2;
+    transition: .5s ease-in-out;
+    transform: translate(-105%, -30%) rotate(50deg);
+}
+
+.btn1:hover button:after {
+    transform: translate(0%, -30%) rotate(50deg);
+}
+
+/************ effect 2 ******************/
+
+.btn2 button{
+    color: crimson;
+    background: none;
+    transition: 0.5s linear;
+    transition-delay: 0.05s;
+    box-shadow: none;
+    overflow: hidden;
+    position: relative;
+}
+
+.btn2:hover button{
+    background: crimson;
+    color: #ffffff;
+    box-shadow: 0 5px 15px #ff204a73;;
+    transition: 0.5s linear;
+    transition-delay: 0.5s;
+}
+
+.btn2 button span{
+    position: absolute;
+    display: block;
+}
+
+.btn2 button span:nth-child(1){
+    top: 0;
+    left: -100%;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, crimson);
+    transition: 0.4s;
+    transition-delay: 0.60s;
+}
+
+.btn2:hover button span:nth-child(1){
+    left: 100%;
+    transition: 0.5s;
+}
+
+.btn2 button span:nth-child(2){
+    top: -100%;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(180deg, transparent, crimson);
+    transition: 0.4s;
+    transition-delay: 0.35s;
+}
+
+.btn2:hover button span:nth-child(2){
+    top: 100%;
+    transition: 0.5s;
+    transition-delay: .15s;
+}
+
+.btn2 button span:nth-child(3){
+    bottom: 0%;
+    right: -100%;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(270deg, transparent, crimson);
+    transition: 0.4s;
+    transition-delay: 0.15s;
+}
+
+.btn2:hover button span:nth-child(3){
+    right: 100%;
+    transition: 0.5s;
+    transition-delay: .3s;
+}
+
+.btn2 button span:nth-child(4){
+    top: 100%;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(0deg, transparent, crimson);
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+
+.btn2:hover button span:nth-child(4){
+    top: -100%;
+    transition: 0.5s;
+    transition-delay: .45s;
+}
+
+/************ effect 3 ******************/
+
+.btn3 button{
+    color: #ffffff;
+    background-color: #3d3d3d;
+    transition: 0.3s linear;
+    position: relative;
+}
+
+.btn3 button::after, .btn3 button::before {
+    content: '';
+    position: absolute;
+    opacity: 0.3;
+    background-color: #000;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.3s linear;
+    z-index: -1;
+}
+
+.btn3:hover button{
+    transform: translate(-12px, -12px);
+}
+
+.btn3:hover button::before{
+    transform: translate(6px, 6px);
+}
+
+.btn3:hover button::after{
+    transform: translate(12px, 12px);
+}
+
+/************ effect 4 ******************/
+
+.btn4:hover button{
+    background-color: #78c7d2;
+    animation: shine infinite;
+    animation-duration: 4s;
+}
+
+@keyframes shine {
+    0% {
+        background-color: #78c7d2;
+      }
+      20% {
+        background-color: #f122d5;
+      }
+      40%{
+        background-color: #e8ec0d;
+      }
+      60%{
+        background-color: #0d5bec;
+      }
+      80%{
+        background-color: #ec0d0d;
+      }
+      100% {
+        background-color: #78c7d2;
+      }
+}
+
+/************ effect 5 ******************/
+
+.btn5 button{
+    background-image: url('./img/wave.png');
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    border-bottom: 2px solid #630383;
+    border-left: 2px solid #9c27b0;
+    border-right: 2px solid #4557b9;
+}
+
+.btn5:hover button{
+    animation: wave infinite linear;
+    animation-duration: 4s;
+}
+
+.btn5:hover button span{
+    color: #000;
+    transition: 0.4s ease;
+}
+
+.btn5:hover button span{
+    color: #fff;
+}
+
+@keyframes wave {
+
+    0% {
+        background-position-x: 0%;
+      }
+
+    100% {
+        background-position-x: 210%;
+      }
+}
